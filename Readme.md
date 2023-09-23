@@ -63,3 +63,17 @@ Retrieve Data
 Update/Modify Data
 Delete data
 
+
+### Normalisation
+
+#### 1NF: Should be Atomic
+![Alt text](image-2.png)
+![Alt text](image-3.png)
+
+#### 2NF: 1NF + No partial Dependancy
+![Alt text](image-4.png)
+![Alt text](image-5.png)
+
+#### 3NF: 2NF + No Transitive Dependancy
+![Alt text](image-6.png)
+![Alt text](image-7.png)
