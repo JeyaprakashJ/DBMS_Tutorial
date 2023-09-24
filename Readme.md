@@ -77,3 +77,5 @@ Delete data
 #### 3NF: 2NF + No Transitive Dependancy
 ![Alt text](image-6.png)
 ![Alt text](image-7.png)
+
+Test
