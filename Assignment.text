@@ -1,1 +1,96 @@
+CREATE DATABASE my_database;
 
+USE my_database;
+
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255),
+    email VARCHAR(255) UNIQUE,
+    password VARCHAR(255)
+);
+
+CREATE TABLE posts (
+    id SERIAL PRIMARY KEY,
+    user_id INTEGER REFERENCES users(id),
+    title VARCHAR(255),
+    content TEXT
+);
+
+INSERT INTO users (name, email, password) VALUES
+('John Doe', 'john.doe@example.com', 'password123'),
+('Jane Doe', 'jane.doe@example.com', 'password456'),
+('Peter Parker', 'peter.parker@example.com', 'password789'),
+('Mary Jane Watson', 'mary.jane.watson@example.com', 'password012'),
+('Bruce Wayne', 'bruce.wayne@example.com', 'password345'),
+('Clark Kent', 'clark.kent@example.com', 'password678'),
+('Diana Prince', 'diana.prince@example.com', 'password901'),
+('Arthur Curry', 'arthur.curry@example.com', 'password234'),
+('Barry Allen', 'barry.allen@example.com', 'password567'),
+('Hal Jordan', 'hal.jordan@example.com', 'password890');
+
+
+INSERT INTO products (name, description, price) VALUES
+('iPhone 14', 'The latest and greatest smartphone from Apple.', '999.99'),
+('Samsung Galaxy S23 Ultra', 'The best Android smartphone on the market.', '1,199.99'),
+('Google Pixel 7 Pro', 'The best camera on a smartphone.', '899.99'),
+('MacBook Air M2', 'The lightest and most powerful MacBook ever.', '1,299.99'),
+('Dell XPS 13', 'The best Windows laptop for students and professionals.', '999.99'),
+('Sony PlayStation 5', 'The most popular gaming console on the market.', '499.99'),
+('Xbox Series X', 'The most powerful gaming console on the market.', '499.99'),
+('Nintendo Switch OLED', 'The best hybrid gaming console on the market.', '349.99'),
+('Amazon Echo Dot', 'The most popular smart speaker on the market.', '49.99'),
+('Google Nest Mini', 'The best budget smart speaker on the market.', '49.99');
+
+
+Basic SQL Queries:
+
+List all users in the users table.
+List all posts in the posts table.
+List all posts that were created by the user with the ID 1.
+List all posts that have the word "Hello" in the title.
+List all posts that were created in the last 24 hours.
+List the names of all users who have at least one post.
+List the titles of all posts that have more than 10 comments.
+List the average number of posts per user.
+List the most popular posts, ordered by the number of views.
+List the most recent posts, ordered by the creation date.
+
+Subqueries:
+
+List the names of all users who have at least one post that was created in the last 24 hours.
+List the titles of all posts that were created by a user who has at least 10 posts.
+List the average number of posts per user who has at least one post.
+List the most popular posts, ordered by the number of views, among posts that were created by users who have at least 10 posts.
+List the most recent posts, ordered by the creation date, among posts that were created by users who have at least one post.
+
+
+
+Joins:
+
+List the names of all users and the titles of all posts that they have created.
+List the names of all users and the number of posts that they have created.
+List the titles of all posts and the name of the user who created each post.
+List the titles of all posts and the number of views for each post.
+List the titles of all posts and the creation date for each post.
+Find the posts that contain a certain word in the title or content.
+Find the posts that have been commented on at least once.
+Find the posts that have not been commented on.
+Find the users who have commented on the most posts.
+Find the users who have commented on the least posts.
+Find the posts that have been created by users who have also commented on the post.
+Find the posts that have been created by users who have not commented on the post.
+Find the posts that have been created by users who have commented on at least one other post.
+Find the posts that have been created by users who have not commented on any other posts.
+
+
+CTEs:
+
+Write a CTE to calculate the average salary for each department in the employees table.
+Write a CTE to identify the employees in each department who have the highest salary.
+Write a CTE to find the total sales for each customer in the customers table.
+Write a CTE to identify the customers who have placed the most orders in the orders table.
+Write a CTE to find the average product rating for each product in the products table.
+
+
+After this, Practice all Easy and medium level questions on https://datalemur.com/
+There are also "Paid-only" problems in datalemur but free problems are good one.
